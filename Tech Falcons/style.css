@@ -1,0 +1,129 @@
+/* General Styles & Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1f2833;
+    /* لون افتراضي */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-in-out;
+    /* سموث ترانزيشن */
+}
+
+/* تعديل الفورم */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(30, 31, 38, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    color: #ffffff;
+}
+
+/* Typography */
+p {
+    font-size: 1.1em;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #cfcfcf;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #2b2d36;
+    color: #fff;
+    appearance: none; /* لإخفاء السهم الافتراضي للمتصفح */
+}
+
+/* التركيز */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #6c5ce7;
+    background-color: #3a3c4a;
+    outline: none;
+}
+
+/* زر */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #6c5ce7, #0984e3);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4834d4, #0652dd);
+    transform: translateY(-2px);
+}
+
+/* النتائج */
+#output-display,
+#advice {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffda79;
+    padding: 15px;
+    background-color: #2b2d36;
+    border-radius: 10px;
+    border: 1px solid #444;
+    min-height: 20px;
+    transition: all 0.3s ease;
+    white-space: pre-line; /* للحفاظ على التنسيق مع الأسطر الجديدة */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* أيقونة الـ select (اختياري) */
+select {
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23fff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body id="body">
+    <div class="animated-bg">
+        <div class="clouds"></div>
+        <div class="stars"></div>
+    </div>
+
+    <div class="container">
+        <b>
+            <p>Plan your day with peace of mind with Meteora </p>
+        </b>
+
+        <form id="weather-form">
+            <!-- مكان -->
+            <div class="input-group">
+                <label for="placeName">Place Name</label>
+                <i class="fa-solid fa-location-dot icon"></i>
+                <input id="placeName" type="text" placeholder="Enter Place Name">
+            </div>
+
+            <!-- التاريخ -->
+            <div class="input-group">
+                <label for="appointment-date">Date</label>
+                <i class="fa-solid fa-calendar-days icon"></i>
+                <input type="date" id="appointment-date">
+            </div>
+
+            <!-- الوقت -->
+            <div class="input-group">
+                <label for="appointment-time">Time</label>
+                <i class="fa-solid fa-clock icon"></i>
+                <input type="time" id="appointment-time">
+            </div>
+
+            <!-- النشاط -->
+            <div class="input-group">
+                <label for="activity">Activity</label>
+                <i class="fa-solid fa-person-running icon"></i>
+                <select id="activity">
+                    <option value="outdoor">Outdoor Activity</option>
+                    <option value="sports">Sports</option>
+                    <option value="party">Party</option>
+                    <option value="picnic">Picnic</option>
+                </select>
+            </div>
+            <br>
+            <!-- زر -->
+            <button type="submit">Get Forecast</button>
+        </form>
+
+        <hr>
+
+        <h2>Results:</h2>
+        <p id="output-display"></p>
+        <p id="advice"></p>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
